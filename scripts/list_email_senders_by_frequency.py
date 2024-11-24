@@ -36,7 +36,8 @@ def save_to_csv(sorted_senders):
 
 def list_senders_by_frequency():
     # Authenticate and build Gmail service
-    # The client secret file is obtained from the Google Cloud Console under OAuth 2.0 Client IDs in the project where the Gmail API is enabled. The associated email is jaditmustafa@gmail.com.    
+    # The client secret file is obtained from the Google Cloud Console under OAuth 2.0 Client IDs in the project where the Gmail API is enabled.
+    #  The associated email is jaditmustafa@gmail.com.    
     flow = InstalledAppFlow.from_client_secrets_file('client_secret.json', SCOPES)
     creds = flow.run_local_server(port=0)
     service = build('gmail', 'v1', credentials=creds)
